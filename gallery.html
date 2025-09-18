@@ -4,17 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ABC FITNESS - Gallery</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
-    /* Background Gradient */
+    /* Global Styles */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #4A90E2, #8E44AD); /* Blue to purple */
-      color: #fff;
+      font-family: 'Comfortaa', Arial, Calibri, sans-serif;
+      background: linear-gradient(135deg, #20458E, #634E99); /* Blue to Purple */
+      color: #00231C; /* Detritus Green for text */
     }
 
-    /* Header */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header & Navigation */
     header {
       background: rgba(0, 0, 0, 0.6);
       padding: 10px 20px;
@@ -26,24 +30,27 @@
       align-items: center;
     }
 
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
     .logo img {
       width: 50px;
-      height: auto;
-      filter: hue-rotate(90deg) saturate(300%); /* Adjust logo to dark green */
+      filter: hue-rotate(90deg) saturate(300%); /* Dark green adjustment */
     }
 
     .logo .name {
+      margin-left: 10px;
       font-weight: bold;
       font-size: 24px;
-      margin-left: 10px;
       color: #006400; /* Dark Green */
     }
 
     .nav-links a {
-      color: #fff;
       margin-left: 20px;
-      text-decoration: none;
       font-weight: bold;
+      color: #fff;
     }
 
     .nav-links a[aria-current="page"] {
@@ -77,7 +84,7 @@
     }
 
     .view-cart-button {
-      background: #006400; /* Dark Green */
+      background: #006400;
       border: none;
       padding: 10px 20px;
       color: #fff;
@@ -86,7 +93,7 @@
       border-radius: 5px;
     }
 
-    /* Gallery */
+    /* Gallery Section */
     .gallery-section {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -114,15 +121,17 @@
     }
 
     .cart-class-card h3 {
-      margin: 10px 0 5px 0;
+      margin: 10px 0 5px;
+      color: #00231C;
     }
 
     .cart-class-card p {
       margin: 5px 0 10px 0;
+      color: #00231C;
     }
 
     .add-to-cart-btn {
-      background: #006400; /* Dark Green */
+      background: #006400;
       border: none;
       padding: 8px 12px;
       color: #fff;
@@ -130,42 +139,81 @@
       border-radius: 5px;
     }
 
-    /* Footer */
-    footer {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 30px 20px;
-      text-align: center;
+    /* Cart Modal */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.7);
     }
 
-    footer a {
+    .modal-content {
+      background: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      color: #00231C;
+    }
+
+    .cart-total {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .cart-buttons button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cart-buttons #clearCartBtn {
+      background: #FF4C4C;
       color: #fff;
-      text-decoration: none;
-      margin: 0 10px;
     }
 
-    .footer-bottom {
-      margin-top: 15px;
-      font-size: 14px;
+    .cart-buttons #processOrderBtn {
+      background: #006400;
+      color: #fff;
     }
 
     /* CTA Section */
     .get-started-hero {
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0,0,0,0.5);
       padding: 40px 20px;
       text-align: center;
+      margin-top: 40px;
     }
 
     .cta-button {
-      background: #006400; /* Dark Green */
+      background: #006400;
       padding: 12px 25px;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
       font-size: 18px;
     }
+
+    /* Footer */
+    footer {
+      background: rgba(0,0,0,0.7);
+      padding: 30px 20px;
+      text-align: center;
+      color: #fff;
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <nav>
       <div class="logo">
@@ -178,57 +226,3 @@
         <a href="gallery.html" aria-current="page">Gallery</a>
         <a href="about.html">About</a>
       </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <img src="assets/Client2_IndividualKickboxing.png" alt="Woman Kickboxing">
-      <div>
-        <h1>Shop ABC Fitness</h1>
-        <p>Elevate your fitness journey with our premium products. From yoga mats to water bottles and stylish t-shirts, we've got everything you need.</p>
-        <button id="viewCartBtn" class="view-cart-button">View Cart</button>
-      </div>
-    </section>
-
-    <section class="gallery-section">
-      <!-- Example Product Card -->
-      <div class="cart-class-card">
-        <img src="assets/Client2_TeeShirt.png" alt="ABC Fitness T-Shirt">
-        <h3>ABC Fitness T-Shirt</h3>
-        <p>$24.99</p>
-        <button class="add-to-cart-btn" data-product="ABC Fitness T-Shirt" data-price="24.99">Add to Cart</button>
-      </div>
-
-      <div class="cart-class-card">
-        <img src="assets/Client2_WaterBottle.png" alt="ABC Fitness Water Bottle">
-        <h3>ABC Fitness Water Bottle</h3>
-        <p>$15.99</p>
-        <button class="add-to-cart-btn" data-product="ABC Fitness Water Bottle" data-price="15.99">Add to Cart</button>
-      </div>
-
-      <div class="cart-class-card">
-        <img src="assets/Client2_YogaMat.png" alt="ABC Fitness Yoga Mat">
-        <h3>ABC Fitness Yoga Mat</h3>
-        <p>$29.99</p>
-        <button class="add-to-cart-btn" data-product="ABC Fitness Yoga Mat" data-price="29.99">Add to Cart</button>
-      </div>
-      <!-- Add more cards as needed -->
-    </section>
-
-    <section class="get-started-hero">
-      <h2>Ready to get started?</h2>
-      <p>Start your free fitness trial today. This includes all classes and a meeting with a nutritionist.</p>
-      <a href="#" class="cta-button">Start Free Trial</a>
-    </section>
-  </main>
-
-  <footer>
-    <div>
-      <p>© 2024 ABC FITNESS. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
