@@ -1,0 +1,138 @@
+abc-fitness-studio/
+│
+├── index.html       # Home page
+├── gallery.html     # Gallery page
+├── contact.html     # Contact page
+├── styles.css       # CSS styles
+└── script.js        # JavaScript for form validation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABC Fitness Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>ABC Fitness Studio</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Balance. Strength. Community.</h2>
+      <p>Join our Yoga, Pilates, and Zumba classes today.</p>
+      <a href="contact.html" class="btn">Book a Class</a>
+    </section>
+
+    <section class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li><strong>Yoga:</strong> Reconnect your body and mind</li>
+        <li><strong>Pilates:</strong> Improve flexibility and posture</li>
+        <li><strong>Zumba:</strong> Dance your way to fitness</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ABC Fitness Studio. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery - ABC Fitness Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Gallery</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <h2>Our Space & Equipment</h2>
+      <div class="gallery-grid">
+        <img src="https://via.placeholder.com/300x200" alt="Yoga Studio">
+        <img src="https://via.placeholder.com/300x200" alt="Pilates Equipment">
+        <img src="https://via.placeholder.com/300x200" alt="Zumba Class">
+        <img src="https://via.placeholder.com/300x200" alt="Weights Area">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ABC Fitness Studio</p>
+  </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - ABC Fitness Studio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact">
+      <h2>Book a Class or Ask a Question</h2>
+      <form id="contactForm">
+        <label for="name">Name*</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" required />
+
+        <label for="message">Message*</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-message"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ABC Fitness Studio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<header>
+  <img src="images/logo.png" alt="ABC Fitness Studio Logo" class="logo" />
+  <h1>ABC Fitness Studio</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
