@@ -38,3 +38,114 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Fitness Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1a1a1a;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      gap: 15px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery-item {
+      background-color: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .caption {
+      padding: 10px;
+      font-weight: bold;
+      color: #333;
+      background-color: #fafafa;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablet */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr; /* 1 column on phone */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ABC Fitness Studio Gallery</h1>
+  
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="images/photo1.jpg" alt="Yoga Class">
+      <div class="caption">Yoga Class</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo2.jpg" alt="Pilates">
+      <div class="caption">Pilates</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo3.jpg" alt="Weight Training">
+      <div class="caption">Weight Training</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo4.jpg" alt="Cardio Session">
+      <div class="caption">Cardio Session</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo5.jpg" alt="Personal Training">
+      <div class="caption">Personal Training</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo6.jpg" alt="Group Workout">
+      <div class="caption">Group Workout</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo7.jpg" alt="Nutrition Guidance">
+      <div class="caption">Nutrition Guidance</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo8.jpg" alt="Fitness Challenge">
+      <div class="caption">Fitness Challenge</div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/photo9.jpg" alt="Studio Interior">
+      <div class="caption">Studio Interior</div>
+    </div>
+  </div>
+
+</body>
+</html>
