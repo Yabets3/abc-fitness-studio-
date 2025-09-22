@@ -3,36 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <title>ABC Fitness - About Us</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <!-- Header -->
+  <header class="site-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="assets/Client2_LogoPalette2_155EBC.png" alt="ABC Fitness Logo">
+        <span class="brand-name">ABC FITNESS</span>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="classes.html">Classes</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html" aria-current="page">About</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section class="about">
-      <h1>About Us</h1>
-      <p>Welcome to our website! We’re passionate about creating engaging, user-friendly experiences. Our goal is to provide high-quality content and services that bring value to our community.</p>
+    <!-- Hero Section -->
+    <section class="hero about-hero">
+      <div class="hero-content">
+        <h1>About Us</h1>
+        <p>
+          At <strong>ABC Fitness Studio</strong>, we’ve been empowering our community 
+          through health and wellness for over 10 years. 
+          From yoga and Pilates to Zumba and strength training, 
+          our mission is to help you achieve balance in both body and mind.
+        </p>
+        <a href="classes.html" class="cta-button">Explore Classes</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/Client2_IndividualKickboxing.png" alt="Kickboxing Training">
+      </div>
+    </section>
 
-      <h2>Our Mission</h2>
-      <p>We strive to build an inclusive space where creativity, learning, and growth thrive.</p>
+    <!-- Owners Section -->
+    <section class="owners-section">
+      <h2>Meet the Owners</h2>
+      <p class="section-subtitle">Over 50 years of combined experience in fitness and wellness</p>
+      <div class="card-grid">
+        <div class="owner-card">
+          <div class="owner-avatar"></div>
+          <h3>Mike</h3>
+          <p>Strength & Conditioning Specialist</p>
+        </div>
+        <div class="owner-card">
+          <div class="owner-avatar"></div>
+          <h3>Sarah</h3>
+          <p>Yoga & Wellness Coach</p>
+        </div>
+        <div class="owner-card">
+          <div class="owner-avatar"></div>
+          <h3>Josh</h3>
+          <p>Pilates & Group Training Expert</p>
+        </div>
+      </div>
+    </section>
 
-      <h2>Our Team</h2>
-      <p>We’re a group of dedicated individuals who work together to bring ideas to life. Collaboration and innovation drive everything we do.</p>
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+      <h2>Our Certifications</h2>
+      <p class="section-subtitle">Trusted by top organizations in the fitness industry</p>
+      <div class="card-grid">
+        <div class="certification-card">
+          <h3>ACE</h3>
+          <p>American Council on Exercise</p>
+        </div>
+        <div class="certification-card">
+          <h3>NASM</h3>
+          <p>National Academy of Sports Medicine</p>
+        </div>
+        <div class="certification-card">
+          <h3>NSCA</h3>
+          <p>National Strength & Conditioning Association</p>
+        </div>
+        <div class="certification-card">
+          <h3>CSCS</h3>
+          <p>Certified Strength & Conditioning Specialist</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready to Get Started?</h2>
+        <p>
+          Join ABC Fitness today and enjoy a <strong>free trial</strong> that includes unlimited classes 
+          and a one-on-one consultation with our certified nutritionist.
+        </p>
+        <a href="classes.html" class="cta-button">Start Free Trial</a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit" class="cta-button">Submit</button>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 My Website. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>
+          <strong>ABC Fitness</strong><br>
+          Mon–Fri: 6 a.m. – 8 p.m.<br>
+          Sat: 8 a.m. – 6 p.m.<br>
+          Sun: Closed
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <a href="classes.html">Classes</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Newsletter</h3>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="subscribe-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="assets/facebook_logo.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="assets/instagram_logo.png" alt="Instagram">
+          </a>
+          <a href="https://www.youtube.com" target="_blank">
+            <img src="assets/youtube_logo.png" alt="YouTube">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 ABC Fitness. All rights reserved.</p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
